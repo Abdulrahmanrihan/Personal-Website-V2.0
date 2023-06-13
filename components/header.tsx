@@ -4,7 +4,7 @@ export default function Header(){
             <div className="flex flex-row justify-around w-1/3">
                 <a className="m-3 " href="/">Home</a>
                 <a className="m-3">Projects</a>
-                <a className="m-3">Scholarships</a>
+                <a className="m-3" href="./about">About</a>
                 <a className="m-3">Blog</a>
                 <a className="m-3">Contact</a>
             </div>

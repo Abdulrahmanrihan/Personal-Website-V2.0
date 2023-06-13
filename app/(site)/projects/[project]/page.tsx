@@ -14,15 +14,16 @@ export default async function Project({params}: Props){
     return (
     <div className="bg-white text-black">
         <Header/>
-        <div className="flex flex-row">
-            <div className="w-1/4"></div>
-            <div className="w-1/4">
-                <div className="my-24">
+        <div className="flex flex-row w-full">
+            <div className="w-2/3 mx-auto">
+                <div className="my-20 flex flex-row">
                     <h1 className="text-5xl font-extrabold bg-gradient-to-r from-green-400 via-blue-400 to-blue-600 bg-clip-text text-transparent ">{project.name}</h1>
+                    <p className="ml-2 p-2 font-bold h-min rounded-xl border-2 border-red-300">{project.category}</p>
                 </div>
-                <PortableText value={project.content}/>
+                <div className="mb-12 text-lg font-thin ">
+                    <PortableText value={project.content}/>
+                </div>
             </div>
-            <div className="w-1/4"></div>
         </div>
         <Footer/>
     </div>

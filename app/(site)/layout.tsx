@@ -1,6 +1,5 @@
 import '../globals.css'
 import Link from "next/link"
-import { getPages } from '@/sanity/sanity-utils';
 
 export const metadata = {
   title: 'My Awesome Site',
@@ -12,8 +11,6 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  const pages = await getPages();
-
   return (
     <html lang="en" className="bg-white">
       <main>{children}</main>
