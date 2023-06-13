@@ -28,9 +28,9 @@ const project = {
       ]
     },
     {
-      name: "url",
-      title: "URL",
-      type: "url"
+      name: "category",
+      title: "Category",
+      type: "string"
     },
     {
       name: "content",

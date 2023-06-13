@@ -1,27 +1,30 @@
 import { getProject } from "@/sanity/sanity-utils";
-import { PortableText } from '@portabletext/react';
-import Image from "next/image"
+import Header from "@/components/header";
+import Footer from "@/components/footer";
+import { PortableText } from "@portabletext/react";
 
 type Props = {
-  params: { project: string }
+    params: {project: string};
 }
 
-export default async function Project({ params }: Props) {
-  const slug = params.project;
-  const project = await getProject(slug);
+export default async function Project({params}: Props){
+    const slug = params.project;
+    const project = await getProject(slug);
 
-  return <div>
-    <header className="flex items-center justify-between">
-      <h1 className="bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent text-5xl drop-shadow font-extrabold">{project.name}</h1>
-      <a href={project.url} title="View Project" target="_blank" rel="noopener noreferrer" className="bg-gray-100 rounded-lg text-gray-500 font-bold py-3 px-4 whitespace-nowrap hover:bg-pink-500 hover:text-pink-100 transition">
-        View Project
-      </a>
-    </header>
-
-    <div className="text-lg text-gray-700 mt-5">
-      <PortableText value={project.content} />
+    return (
+    <div className="bg-white text-black">
+        <Header/>
+        <div className="flex flex-row">
+            <div className="w-1/4"></div>
+            <div className="w-1/4">
+                <div className="my-24">
+                    <h1 className="text-5xl font-extrabold bg-gradient-to-r from-green-400 via-blue-400 to-blue-600 bg-clip-text text-transparent ">{project.name}</h1>
+                </div>
+                <PortableText value={project.content}/>
+            </div>
+            <div className="w-1/4"></div>
+        </div>
+        <Footer/>
     </div>
-
-    <Image src={project.image} alt={project.name} width={1920} height={1080} className="mt-10 border-2 border-gray-700 object-cover rounded-xl" />
-  </div>
-} 
+    );
+}
