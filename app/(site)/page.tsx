@@ -1,16 +1,21 @@
 import { getProjects } from "@/sanity/sanity-utils";
+import { getBlogPosts } from "@/sanity/sanity-utils";
+
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+
 import Link from "next/link";
+
 import { Spotify } from "react-spotify-embed";
-import Coffee from "@/components/buyCoffee"; 
+import { PortableText } from "@portabletext/react";
+
 
 
 export default async function Home() {
   const projects = await getProjects();
+  const blogs = await getBlogPosts();
   return(
-    <div className="w-full bg-white">
-      <Coffee/>
+    <div className="w-full bg-white regular">
       <Header/>
       <div className="mx-auto w-2/3">
         <div className="my-24">
@@ -50,13 +55,30 @@ export default async function Home() {
         </div>
         <div className="-ml-24 w-44 text-center bg-gradient-to-r from-green-400 to-blue-500 -rotate-12 rounded-lg mb-8 p-1 ">
           <div className="bg-white h-full p-2">
+            <p className="text-black text-xl font-bold">Projects</p>
+          </div>
+        </div>
+        <div className="flex flex-row flex-wrap mb-24 w-full">
+          {projects.slice(0, 2).map((project) => (
+            <div className="w-1/3 mx-auto flex flex-col ">
+              <div className="pb-5 bold mx-auto text-lg text-black " key={project._id}>
+                {project.name}
+              </div>
+              <div className="thin pb-5"><PortableText value={project.content}/></div>
+              <button className="text-white mx-auto text-sm ronuded-xl p-2 m-2 bg-gradient-to-r from-green-400 to-blue-500 w-1/2 hover:scale-105">View project</button>
+            </div>
+          ))}
+        </div>
+        <div className="-ml-24 w-44 text-center bg-gradient-to-r from-green-400 to-blue-500 -rotate-12 rounded-lg mb-8 p-1 ">
+          <div className="bg-white h-full p-2">
             <p className="text-black text-xl font-bold">Blog</p>
           </div>
         </div>
         <div className="flex flex-row flex-wrap mb-24">
-          {projects.map((project) => (
-            <Link href={`/projects/${project.slug}`} className="w-1/4 text-black hover:scale-105" key={project._id}>
-              {project.name}
+          {blogs.slice(0, 2).map((blog) => (
+            <Link href={`/blog/${blog.slug}`} className="w-1/4 text-black hover:scale-105" key={blog._id}>
+              <div>{blog.name}</div>
+              <div>{blog.subtitle}</div>
             </Link>
           ))}
         </div>

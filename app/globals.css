@@ -4,12 +4,26 @@
 
 
 @font-face {
-  font-family: 'Montserrat';
-  src: url('../fonts/montserrat/Montserrat-Light.ttf');
+  font-family: 'Montserrat-thin';
   src: url('../fonts/montserrat/Montserrat-Thin.ttf');
+}
+@font-face {
+  font-family: 'Montserrat-regular';
+  src: url('../fonts/montserrat/Montserrat-Regular.ttf');
+}
+@font-face {
+  font-family: 'Montserrat-bold';
   src: url('../fonts/montserrat/Montserrat-Bold.ttf');
 }
 
 html{
-    font-family: 'Montserrat', sans-serif;
-  }
+  font-family: 'Montserrat-regular';
+}
+
+.bold{
+  font-family: 'Montserrat-bold';
+}
+
+.thin{
+  font-family: 'Montserrat-thin';
+}

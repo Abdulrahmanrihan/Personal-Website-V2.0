@@ -28,6 +28,11 @@ const project = {
       ]
     },
     {
+      name: "url",
+      title: "Url",
+      type: "url",
+    },
+    {
       name: "category",
       title: "Category",
       type: "string"
