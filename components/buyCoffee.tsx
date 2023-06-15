@@ -1,6 +1,6 @@
 export default function Coffee() {
     return (
-        <main className="fixed z-10  bottom-32 bg-yellow-300 border-black right-0 w-46 border-2 border-r-0 rounded-l-xl">
+        <main className="fixed z-10  bottom-32 bg-yellow-300 border-black right-0 w-46 border border-r-0 rounded-l-xl">
             <a
             className="flex flex-row bottom-16 right-0 "
             target="_blank"
