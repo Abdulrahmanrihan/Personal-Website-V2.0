@@ -37,7 +37,7 @@ const skills = [
   },
   {
     title: "back-end",
-    description: "Basic knowledge of APIs and back-end configuration using sanity.io and cockpit",
+    description: "Basic knowledge of APIs and back-end configuration using sanity.io and cockpit, and also very basic knowledge in asp.net and SQL SMS.",
     category: "Web",
   }
 ]
