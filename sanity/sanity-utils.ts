@@ -39,6 +39,7 @@ export async function getBlogPost(slug: string): Promise<Blog> {
       _createdAt,
       name,
       "slug": slug.current,
+      date,
       category,
       subtitle,
       content

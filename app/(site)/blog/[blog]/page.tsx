@@ -23,7 +23,8 @@ export default async function Blog({params}: Props){
                     <h1 className="text-5xl bold bg-gradient-to-r from-green-400 via-blue-400 to-blue-600 bg-clip-text text-transparent ">{blog.name}</h1>
                     <p className="ml-2 p-2 float-right font-bold h-min rounded-xl border-2 border-red-300">{blog.category}</p>
                 </div>
-                <div className="mb-20 text-sm">{blog.subtitle}</div>
+                <div className="mb-2 text-sm">{blog.subtitle}</div>
+                <div className="mb-20 text-sm text-gray-500">{blog.date}</div>
                 <div className="mb-12 text-lg font-thin ">
                     <PortableText value={blog.content}/>
                 </div>

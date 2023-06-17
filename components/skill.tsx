@@ -7,7 +7,7 @@ export default function Skill(props:any){
                     {props.category}
                 </div>
             </div>
-            <div className="font-thin text-sm tracking-wide">{props.description}</div>
+            <div className="font-thin text-sm tracking-wide text-gray-700">{props.description}</div>
         </div>
     );
 }
