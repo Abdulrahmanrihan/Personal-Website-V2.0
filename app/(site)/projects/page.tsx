@@ -16,42 +16,42 @@ export default async function Project(){
                 <div className="flex flex-row">
                     <div className="flex flex-col w-1/3 mb-24">
                         {projects.slice(0, Math.ceil(projects.length/3)).map((project) => (
-                            <div className="h-min bg-gradient-to-r from-green-400 to-blue-500 rounded-xl p-0.5 mr-2 mb-2">
+                            <div className="h-min bg-gradient-to-r from-blue-500 via-green-400 to-green-600 rounded-xl p-0.5 mr-2 mb-2">
                                 <div className="relative bg-white p-3 rounded-xl h-full items-center flex flex-col ">
                                     <div className="pb-2 bold text-lg text-black" key={project._id}>
                                         {project.name}
                                     </div>
                                     <div className="mb-3 border p-1 text-sm border-blue-200 rounded-lg">{project.category}</div>
                                     <div className="mb-12"><PortableText value={project.content}/></div>
-                                    <a href={project.url}><button className="absolute bottom-0 text-white text-sm ronuded-xl p-2 m-2 bg-gradient-to-r from-green-400 to-blue-500 hover:scale-105 w-max">View project</button></a>
+                                    <a className="rounded-lg" href={project.url}><button className="absolute bottom-0 text-white text-sm rounded-lg p-2 m-2 bg-gradient-to-r from-green-400 to-blue-500  hover:scale-105 w-max">View project</button></a>
                                 </div>
                             </div>
                         ))}
                     </div>
                     <div className="flex flex-col w-1/3 mb-24">
                         {projects.slice(Math.ceil(projects.length/3), Math.ceil(projects.length - projects.length/3)).map((project) => (
-                            <div className="h-min bg-gradient-to-r from-green-400 to-blue-500 rounded-xl p-0.5 mr-2 mb-2">
+                            <div className="h-min bg-gradient-to-r from-blue-500 via-green-400 to-green-600 rounded-xl p-0.5 mr-2 mb-2">
                                 <div className="relative bg-white p-3 rounded-xl h-full items-center flex flex-col ">
                                     <div className="pb-2 bold text-lg text-black" key={project._id}>
                                         {project.name}
                                     </div>
                                     <div className="mb-3 border p-1 text-sm border-blue-200 rounded-lg">{project.category}</div>
                                     <div className="mb-12"><PortableText value={project.content}/></div>
-                                    <a href={project.url}><button className="absolute bottom-0 text-white text-sm ronuded-xl p-2 m-2 bg-gradient-to-r from-green-400 to-blue-500 hover:scale-105 w-max">View project</button></a>
+                                    <a className="rounded-lg" href={project.url}><button className="absolute bottom-0 text-white text-sm rounded-lg p-2 m-2 bg-gradient-to-r from-green-400 to-blue-500  hover:scale-105 w-max">View project</button></a>
                                 </div>
                             </div>
                         ))}
                     </div>
                     <div className="flex flex-col w-1/3 mb-24">
                         {projects.slice(Math.ceil(projects.length - projects.length/3), projects.length).map((project) => (
-                            <div className="h-min bg-gradient-to-r from-green-400 to-blue-500 rounded-xl p-0.5 mr-2 mb-2">
+                            <div className="h-min bg-gradient-to-r from-blue-500 via-green-400 to-green-600 rounded-xl p-0.5 mr-2 mb-2">
                                 <div className="relative bg-white p-3 rounded-xl h-full items-center flex flex-col ">
                                     <div className="pb-2 bold text-lg text-black" key={project._id}>
                                         {project.name}
                                     </div>
                                     <div className="mb-3 border p-1 text-sm border-blue-200 rounded-lg">{project.category}</div>
                                     <div className="mb-12"><PortableText value={project.content}/></div>
-                                    <a href={project.url}><button className="absolute bottom-0 text-white text-sm ronuded-xl p-2 m-2 bg-gradient-to-r from-green-400 to-blue-500 hover:scale-105 w-max">View project</button></a>
+                                    <a className="rounded-lg" href={project.url}><button className="absolute bottom-0 text-white text-sm rounded-lg p-2 m-2 bg-gradient-to-r from-green-400 to-blue-500 hover:scale-105 w-max">View project</button></a>
                                 </div>
                             </div>
                         ))}

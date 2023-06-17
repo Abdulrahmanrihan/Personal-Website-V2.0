@@ -19,11 +19,11 @@ export default async function Blog({params}: Props){
         </div>
         <div className="flex flex-row w-full">
             <div className="w-2/3 mx-auto">
-                <div className="my-20 flex justify-between flex-row w-full">
-                    <h1 className="text-5xl font-extrabold bg-gradient-to-r from-green-400 via-blue-400 to-blue-600 bg-clip-text text-transparent ">{blog.name}</h1>
+                <div className="mb-3 mt-24 flex justify-between flex-row w-full">
+                    <h1 className="text-5xl bold bg-gradient-to-r from-green-400 via-blue-400 to-blue-600 bg-clip-text text-transparent ">{blog.name}</h1>
                     <p className="ml-2 p-2 float-right font-bold h-min rounded-xl border-2 border-red-300">{blog.category}</p>
                 </div>
-                <div className="my-2 text-sm">{blog.subtitle}</div>
+                <div className="mb-20 text-sm">{blog.subtitle}</div>
                 <div className="mb-12 text-lg font-thin ">
                     <PortableText value={blog.content}/>
                 </div>

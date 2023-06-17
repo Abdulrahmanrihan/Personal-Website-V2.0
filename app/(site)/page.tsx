@@ -52,10 +52,10 @@ export default async function Home() {
       <Header/>
       <div className="mx-auto w-2/3">
         <div className="my-24">
-          <h1 className="text-5xl my-12 font-extrabold text-black">Hola! I&apos;m
+          <h1 className="text-5xl my-12 font-extrabold text-black">Hola <span className="inline">&#128075;</span> I&apos;m
             <span className="bg-gradient-to-r from-green-400 via-blue-400 to-blue-600 hover:from-green-200 hover:via-green-400 hover:to-blue-400 bg-clip-text text-transparent bold"> Abdulrahman</span> !
             </h1>
-          <p className="mt-3 text-xl font-extralight text-gray-600 tracking-wide">A PASSIONATE CS STUDENT WHO WISHES TO LEAVE AN ETERNAL IMPACT ON EARTH. I CODE STUFF FOR A LIVING AND CODE OTHER STUFF FOR FUN. FINALLY, MAY WE FOREVER STAY YOUNG, AMEN!</p>
+          <p className="mt-3 text-xl font-extralight text-gray-600 tracking-wide">A PASSIONATE CS STUDENT WHO WISHES TO LEAVE AN ETERNAL IMPACT ON EARTH. I CODE STUFF FOR A LIVING AND CODE OTHER STUFF FOR FUN. MAY WE FOREVER STAY YOUNG, AMEN!</p>
           <p className="mt-3 text-xl font-extralight text-gray-600 tracking-wide">I MADE THIS WEBSITE TO PUT MYSELF ALL OUT THERE SO PEOPLE WILL KNOW ME BETTER</p>
         </div>
 
@@ -97,7 +97,7 @@ export default async function Home() {
             <Link href={`/blog/${blog.slug}`} className="w-1/4 mr-3 text-black hover:scale-105" key={blog._id}>
               <div className="flex flex-row">
                 <div className="text-lg bold mr-1">{blog.name}</div>
-                <div className="mb-3 border p-1 text-sm border-blue-200 rounded-lg">{blog.category}</div>
+                <div className="mb-3 h-min border p-1 text-sm border-blue-200 rounded-lg">{blog.category}</div>
               </div>
               <div className="text-sm">{blog.subtitle}</div>
             </Link>
