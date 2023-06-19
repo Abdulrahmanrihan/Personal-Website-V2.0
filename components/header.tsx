@@ -1,6 +1,6 @@
 export default function Header(){
     return(
-        <div className="flex regular flex-row z-10 sticky top-0 justify-between bg-gray-300 dark:bg-gray-600 w-full py-2 px-12 font-bold text-white">
+        <div className="flex regular flex-row z-10 sticky top-0 justify-between bg-gray-400 dark:bg-gray-600 w-full py-2 px-12 font-bold text-white">
             <div className="flex flex-row justify-around w-1/3">
                 <a className="m-3 hover:text-lg hover:m-2 hover:text-green-400" href="/">Home</a>
                 <a className="m-3 hover:text-lg hover:m-2 hover:text-blue-400" href="./about">About</a>
