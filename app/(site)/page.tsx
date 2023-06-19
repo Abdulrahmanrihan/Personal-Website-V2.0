@@ -94,7 +94,7 @@ export default async function Home() {
         </div>
         <div className="flex flex-row flex-wrap justify-between mb-24">
           {blogs.slice(0, 3).map((blog) => (
-            <Link href={`/blog/${blog.slug}`} className="w-1/4 mr-3 text-black hover:scale-105" key={blog._id}>
+            <Link key={blog._id} href={`/blog/${blog.slug}`} className="w-1/4 mr-3 text-black hover:scale-105">
               <div className="flex flex-row">
                 <div className="text-lg bold mr-1">{blog.name}</div>
                 <div className="mb-3 h-min border p-1 text-sm border-blue-200 rounded-lg">{blog.category}</div>

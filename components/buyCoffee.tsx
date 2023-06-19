@@ -1,3 +1,5 @@
+import Image
+ from "next/image";
 export default function Coffee() {
     return (
         <main className="fixed z-10  bottom-32 bg-yellow-300 border-black right-0 w-46 border border-r-0 rounded-l-xl">
@@ -6,7 +8,7 @@ export default function Coffee() {
             target="_blank"
             href="https://www.buymeacoffee.com/abdulrahmnrihan"
             >
-            <img
+            <Image
                 className="rounded-l-xl w-12 h-12 mr-1 bg-white p-2 "
                 src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg"
                 alt="Buy me a coffee"
