@@ -14,31 +14,37 @@ const skills = [
     title: "Mindstorm",
     description: "Learnt the whole frmeowork to participate in the FLL and SUMO robotics Competitions",
     category: "lego",
+    key: 1
   },
   {
     title: "Front-end",
     description: "I have a solid professional experience in Vanilla JS and a few JS frameworks such as React (gatsby/next) and svelteJs",
     category: "Web",
+    key: 2
   },
   {
     title: "C plus plus",
     description: "I learnt c++ in terms of competitive programming in addition to the basic data structures and algorithms",
     category: "C++",
+    key: 3
   },
   {
     title: "Python",
     description: "Me and python go way back to when I started learning programming in 2017, since then I learnt how to use tkinter, pandas, numpy, sklearn, keras, matplotlib and many more",
     category: "Python",
+    key: 4
   },
   {
     title: "SQL",
     description: "I have a good grasp of sql commands and database principles. I also learnt how to configure web projects with existing sql databses",
     category: "database",
+    key: 5
   },
   {
     title: "back-end",
     description: "Basic knowledge of APIs and back-end configuration using sanity.io and cockpit, and also very basic knowledge in asp.net and SQL SMS.",
     category: "Web",
+    key: 6
   }
 ]
 
@@ -67,7 +73,7 @@ export default async function Home() {
         <div className="flex flex-row flex-wrap text-black mb-24">
             {
               skills.map((skill) =>
-              <Skill title={skill.title} category={skill.category} description={skill.description}/>
+              <Skill key={skill.key} title={skill.title} category={skill.category} description={skill.description}/>
               )
             }
         </div>
