@@ -19,14 +19,14 @@ export default async function Project(){
         <div className="flex flex-row w-full">
             <div className="w-2/3 mx-auto">
                 <div className="my-20 flex flex-row w-full">
-                    <h1 className="text-5xl font-extrabold bg-gradient-to-r from-green-400 via-blue-400 to-blue-600 bg-clip-text text-transparent ">All projects</h1>
+                    <h1 className="text-5xl font-extrabold bg-gradient-to-r from-green-400 via-blue-400 to-blue-600 bg-clip-text bold text-transparent ">All projects</h1>
                 </div>
                 <div className="flex flex-row">
                     <div className="flex flex-col w-1/3 mb-24">
                         {projects.slice(0, Math.ceil(projects.length/3)).map((project) => (
-                            <div className="h-min bg-gradient-to-r from-blue-500 via-green-400 to-green-600 rounded-xl p-0.5 mr-2 mb-2">
+                            <div key={project._id} className="h-min bg-gradient-to-r from-blue-500 via-green-400 to-green-600 rounded-xl p-0.5 mr-2 mb-2">
                                 <div className="relative bg-white p-3 rounded-xl h-full items-center flex flex-col ">
-                                    <div className="pb-2 bold text-lg text-black" key={project._id}>
+                                    <div className="pb-2 bold text-lg text-black">
                                         {project.name}
                                     </div>
                                     <div className="mb-2 flex flex-row border border-blue-400 rounded-lg">
@@ -42,9 +42,9 @@ export default async function Project(){
                     </div>
                     <div className="flex flex-col w-1/3 mb-24">
                         {projects.slice(Math.ceil(projects.length/3), Math.ceil(projects.length - projects.length/3)).map((project) => (
-                            <div className="h-min bg-gradient-to-r from-blue-500 via-green-400 to-green-600 rounded-xl p-0.5 mr-2 mb-2">
+                            <div key={project._id} className="h-min bg-gradient-to-r from-blue-500 via-green-400 to-green-600 rounded-xl p-0.5 mr-2 mb-2">
                                 <div className="relative bg-white p-3 rounded-xl h-full items-center flex flex-col ">
-                                    <div className="pb-2 bold text-lg text-black" key={project._id}>
+                                    <div className="pb-2 bold text-lg text-black">
                                         {project.name}
                                     </div>
                                     <div className="mb-2 flex flex-row border border-blue-400 rounded-lg">
@@ -60,9 +60,9 @@ export default async function Project(){
                     </div>
                     <div className="flex flex-col w-1/3 mb-24">
                         {projects.slice(Math.ceil(projects.length - projects.length/3), projects.length).map((project) => (
-                            <div className="h-min bg-gradient-to-r from-blue-500 via-green-400 to-green-600 rounded-xl p-0.5 mr-2 mb-2">
+                            <div key={project._id} className="h-min bg-gradient-to-r from-blue-500 via-green-400 to-green-600 rounded-xl p-0.5 mr-2 mb-2">
                                 <div className="relative bg-white p-3 rounded-xl h-full items-center flex flex-col ">
-                                    <div className="pb-2 bold text-lg text-black" key={project._id}>
+                                    <div className="pb-2 bold text-lg text-black">
                                         {project.name}
                                     </div>
                                     <div className="mb-2 flex flex-row border border-blue-400 rounded-lg">

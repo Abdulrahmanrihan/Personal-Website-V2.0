@@ -55,8 +55,8 @@ export default async function Home() {
           <h1 className="text-5xl my-12 font-extrabold text-black">Hola <span className="inline">&#128075;</span> I&apos;m
             <span className="bg-gradient-to-r from-green-400 via-blue-400 to-blue-600 hover:from-green-200 hover:via-green-400 hover:to-blue-400 bg-clip-text text-transparent bold"> Abdulrahman</span> !
             </h1>
-          <p className="mt-3 text-xl font-extralight text-gray-600 tracking-wide">A PASSIONATE CS STUDENT WHO WISHES TO LEAVE AN ETERNAL IMPACT ON EARTH. I CODE STUFF FOR A LIVING AND CODE OTHER STUFF FOR FUN. MAY WE FOREVER STAY YOUNG, AMEN!</p>
-          <p className="mt-3 text-xl font-extralight text-gray-600 tracking-wide">I MADE THIS WEBSITE TO PUT MYSELF OUT IN THE OPEN SO PEOPLE WILL KNOW ME BETTER</p>
+          <p className="mt-3 text-xl text-gray-600 tracking-wide">A PASSIONATE CS STUDENT WHO WISHES TO LEAVE AN ETERNAL IMPACT ON EARTH. I CODE STUFF FOR A LIVING AND CODE OTHER STUFF FOR FUN. MAY WE FOREVER STAY YOUNG, AMEN!</p>
+          <p className="mt-3 text-xl text-gray-600 tracking-wide">I MADE THIS WEBSITE TO PUT MYSELF OUT IN THE OPEN SO PEOPLE WILL KNOW ME BETTER</p>
         </div>
 
         <div className="-ml-24 w-44 text-center bg-gradient-to-r from-green-400 to-blue-500 -rotate-12 rounded-lg mb-8 p-1">
@@ -78,8 +78,8 @@ export default async function Home() {
         </div>
         <div className="flex flex-row flex-wrap mb-24 w-full">
           {projects.slice(0, 2).map((project) => (
-            <div className="w-1/2 p-6 mx-auto flex flex-col ">
-              <div className="pb-3 bold text-lg text-black " key={project._id}>
+            <div key={project._id} className="w-1/2 p-6 mx-auto flex flex-col ">
+              <div className="pb-3 bold text-lg text-black " >
                 {project.name}
               </div>
               <div className="pb-5 text-gray-700"><PortableText value={project.content}/></div>

@@ -1,4 +1,5 @@
 import '../globals.css'
+import Head from 'next/head';
 
 export const metadata = {
   title: 'Abdulrahman Rihan',
@@ -12,6 +13,9 @@ export default async function RootLayout({
 }) {
   return (
     <html lang="en" className="bg-white">
+      <Head>
+        <link rel='shortcut icon' href='../favicon.png'/>
+      </Head>
       <main>{children}</main>
     </html>
   )
