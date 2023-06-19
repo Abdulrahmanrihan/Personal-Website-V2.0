@@ -7,7 +7,7 @@ export default async function Project(){
     const blogs = await getBlogPosts();
     return (
     <div className="bg-white text-black">
-        <Header/>
+        <Header/>   
         <div className="flex flex-row w-full">
             <div className="w-2/3 mx-auto">
             <div className="my-24">
@@ -30,6 +30,7 @@ export default async function Project(){
                 </div>
             </div>
         </div>
+        <div className="my-12"></div>
         <Footer/>
     </div>
     );

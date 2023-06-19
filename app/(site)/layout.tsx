@@ -16,7 +16,7 @@ export default async function RootLayout({
       <Head>
         <link rel='shortcut icon' href='../favicon.png'/>
       </Head>
-      <main>{children}</main>
+      <main className="h-min-screen">{children}</main>
     </html>
   )
 }

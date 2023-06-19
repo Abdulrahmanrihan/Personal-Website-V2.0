@@ -4,7 +4,7 @@ import { Spotify } from "react-spotify-embed";
 
 export default function About(){
     return(
-        <main className="bg-white text-black">
+        <main className="bg-white text-black h-min-screen">
         <Header/>
         <div className="flex flex-row w-full">
             <div className="w-2/3 mx-auto">
