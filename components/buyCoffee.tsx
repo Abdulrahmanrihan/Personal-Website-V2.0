@@ -9,6 +9,8 @@ export default function Coffee() {
             href="https://www.buymeacoffee.com/abdulrahmnrihan"
             >
             <Image
+                width={12}
+                height={12}
                 className="rounded-l-xl w-12 h-12 mr-1 bg-white p-2 "
                 src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg"
                 alt="Buy me a coffee"
