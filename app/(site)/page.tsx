@@ -65,7 +65,7 @@ export default async function Home() {
           <p className="mt-3 p-6 md:p-0 text-xl text-gray-600 tracking-wide">I MADE THIS WEBSITE TO PUT MYSELF OUT IN THE OPEN SO PEOPLE WILL KNOW ME BETTER</p>
         </div>
 
-        <div className="md:-ml-24 w-44 text-center bg-gradient-to-r from-green-400 to-blue-500 md:-rotate-12 rounded-lg mb-8 ml-8 md:ml-0 p-1">
+        <div className="md:-ml-24 w-44 text-center bg-gradient-to-r from-green-400 to-blue-500 md:-rotate-12 rounded-lg mb-8 ml-8 p-1">
           <div className="bg-white h-full p-2">
             <p className="text-black text-xl font-bold">Skills</p>
           </div>
@@ -77,7 +77,7 @@ export default async function Home() {
               )
             }
         </div>
-        <div className="md:-ml-24 w-44 text-center bg-gradient-to-r from-green-400 to-blue-500 md:-rotate-12 rounded-lg mb-8 ml-8 md:ml-0 p-1 ">
+        <div className="md:-ml-24 w-44 text-center bg-gradient-to-r from-green-400 to-blue-500 md:-rotate-12 rounded-lg mb-8 ml-8 p-1 ">
           <div className="bg-white h-full p-2">
             <p className="text-black text-lg font-bold">Recent Projects</p>
           </div>
@@ -93,7 +93,7 @@ export default async function Home() {
             </div>
           ))}
         </div>
-        <div className="md:-ml-24 w-44 text-center bg-gradient-to-r from-green-400 to-blue-500 md:-rotate-12 rounded-lg mb-8 ml-8 md:ml-0 p-1 ">
+        <div className="md:-ml-24 w-44 text-center bg-gradient-to-r from-green-400 to-blue-500 md:-rotate-12 rounded-lg mb-8 ml-8 p-1 ">
           <div className="bg-white h-full p-2">
             <p className="text-black text-xl font-bold">Recent Blogs</p>
           </div>
