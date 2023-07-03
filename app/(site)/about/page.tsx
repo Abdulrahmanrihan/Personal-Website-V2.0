@@ -16,13 +16,13 @@ export default function About(){
                     <p>I have been learning programming since <span className="bold">2016</span>. I started with xml and java for android mobile development, I was super hooked on the fact that I might be able to develop mobile games by myself. I slowly started learning more and more about other programming languages such as python and C++, and gradually disregarded the latter idea. By <span className="bold">2020</span> I was fully invested in both <span className="bg-green-100">web development</span> and <span className="bg-green-100">machine learning</span></p><br/>
                     <p>I cofounded my first web development startup that year, but ig I wasn&apos;t ready for that yet so we shut it down 6 months after, and for almost two years I honed my skills and started freelancing in <span className="bold">2023</span>.</p>
                 </div>
-                <div className="flex flex-row w-full mx-auto">
-                <div className="flex flex-wrap flex-col mr-2 w-1/2">
+                <div className="flex flex-col md:flex-row w-full mx-auto">
+                <div className="flex flex-wrap flex-col mr-2 w-full md:w-1/2">
                     <Spotify className="mb-2" wide link="https://open.spotify.com/track/3Y4rUyw7XBCK6hGHCOt6rp?si=e30a2c0214eb4fc5" />
                     <Spotify className="mb-2" wide link="https://open.spotify.com/track/6QpZXzHcOgXK41Y3YCx203?si=1779e929168a4d1c" />
                     <Spotify className="mb-2" wide link="https://open.spotify.com/track/3OFejsaM3NDkclJg3rjWI2?si=0fa3b7f8a84149aa" />
                 </div>
-                <div className="flex flex-wrap flex-col w-1/2">
+                <div className="flex flex-wrap flex-col w-full md:w-1/2">
                     <Spotify className="mb-2" wide link="https://open.spotify.com/track/6wmAHw1szh5RCKSRjiXhPe?si=c97470d9e7ee4de3" />
                     <Spotify className="mb-2" wide link="https://open.spotify.com/track/23OXdR7YuUBVWh5hSnYJau?si=27addf7aaaa3412e" />
                     <Spotify className="mb-2" wide link="https://open.spotify.com/track/3xKsf9qdS1CyvXSMEid6g8?si=7fc842a08470419c" />

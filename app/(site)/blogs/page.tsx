@@ -10,12 +10,12 @@ export default async function Project(){
         <Header/>   
         <div className="flex flex-row w-full">
             <div className="w-2/3 mx-auto">
-            <div className="my-24">
+                <div className="my-24">
                     <h1 className="text-5xl bold font-extrabold bg-gradient-to-r from-green-400 via-blue-400 to-blue-600 bg-clip-text text-transparent ">All blog posts </h1>
                 </div>
-            <div className="flex flex-row md:justify-between flex-wrap mb-24">
+                <div className="flex flex-col md:flex-row md:justify-between flex-wrap mb-24">
                 {blogs.map((blog) => (
-                    <div key={blog._id} style={{width:'32%',}} className=" bg-gradient-to-r g-gradient-to-r from-green-400 via-blue-400 to-blue-600 rounded-xl p-0.5 mb-2 hover:scale-105">
+                    <div key={blog._id} className="w-full md:w-1/3 bg-gradient-to-r g-gradient-to-r from-green-400 via-blue-400 to-blue-600 rounded-xl p-0.5 mb-6 hover:scale-105">
                         <div className="h-full bg-white rounded-xl p-3">
                             <div className="flex flex-row flex-wrap">
                                 <Link href={`/blog/${blog.slug}`} className="mr-1 bold text-black">

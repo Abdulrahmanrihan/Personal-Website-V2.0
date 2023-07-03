@@ -22,7 +22,7 @@ export default async function Project(){
                 <div className="my-20 flex flex-row w-full">
                     <h1 className="text-5xl font-extrabold bg-gradient-to-r from-green-400 via-blue-400 to-blue-600 bg-clip-text bold text-transparent ">All projects</h1>
                 </div>
-                <div className="flex flex-row">
+                <div className="hidden md:flex flex-row">
                     <div className="flex flex-col w-1/3 mb-24">
                         {projects.slice(0, Math.ceil(projects.length/3)).map((project) => (
                             <div key={project._id} className="h-min bg-gradient-to-r from-blue-500 via-green-400 to-green-600 rounded-xl p-0.5 mr-2 mb-2">
@@ -77,6 +77,24 @@ export default async function Project(){
                             </div>
                         ))}
                     </div>
+                </div>
+                <div className="md:hidden flex flex-col">
+                        {projects.map((project) => (
+                            <div key={project._id} className="h-min bg-gradient-to-r from-blue-500 via-green-400 to-green-600 rounded-xl p-0.5 mb-6">
+                                <div className="relative bg-white p-3 rounded-xl h-full items-center flex flex-col ">
+                                    <div className="pb-2 bold text-lg text-black">
+                                        {project.name}
+                                    </div>
+                                    <div className="mb-2 flex flex-row border border-blue-400 rounded-lg">
+                                        <div className="m-1">{projectIcons[project.category]}</div>
+                                        <div className="m-1 text-sm ">{project.category}</div>
+                                    </div>
+                                    <div className="mb-12"><PortableText value={project.content}/></div>
+                                    <a className="rounded-lg" href={project.url}><button className={project.url? "absolute bottom-0 text-white text-sm rounded-lg p-2 m-2 bg-gradient-to-r from-green-400 to-blue-500  hover:scale-105 w-max": 'hidden'}>View project</button></a>
+                                    <div className={project.url? 'hidden' : 'text-sm text-gray-500'}>Finished</div>
+                                </div>
+                            </div>
+                        ))}
                 </div>
             </div>
         </div>
