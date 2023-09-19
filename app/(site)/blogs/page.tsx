@@ -15,7 +15,7 @@ export default async function Project(){
                 </div>
                 <div className="flex flex-col md:flex-row md:justify-between flex-wrap mb-24">
                 {blogs.map((blog) => (
-                    <div key={blog._id} className="w-full md:w-56 bg-gradient-to-r g-gradient-to-r from-green-400 via-blue-400 to-blue-600 rounded-xl p-0.5 mb-6 hover:scale-105">
+                    <div key={blog._id} className="w-full md:w-96 bg-gradient-to-r g-gradient-to-r from-green-400 via-blue-400 to-blue-600 rounded-xl p-0.5 mb-6 hover:scale-105">
                         <div className="h-full bg-white rounded-xl p-3">
                             <div className="flex flex-row flex-wrap">
                                 <Link href={`/blog/${blog.slug}`} className="mr-1 bold text-black">
