@@ -84,8 +84,8 @@ export default async function Home() {
         </div>
         <div className="flex flex-col md:flex-row md:flex-wrap mb-24 w-full">
           {projects.slice(0, 2).map((project) => (
-            <div key={project._id} className="w-full md:w-1/2 p-6 mx-auto flex flex-col ">
-              <div className="pb-3 mx-2 md:mx-0 bold text-lg text-black " >
+            <div key={project._id} className="w-full md:w-1/2 p-6 mx-auto flex flex-col">
+              <div className="pb-3 mx-2 md:mx-0 bold text-lg text-black" >
                 {project.name}
               </div>
               <div className="pb-5 mx-2 md:mx-0 text-gray-700"><PortableText value={project.content}/></div>

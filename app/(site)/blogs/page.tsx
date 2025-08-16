@@ -8,20 +8,20 @@ export default async function Project(){
     return (
     <div className="bg-white text-black">
         <Header/>   
-        <div className="flex flex-row w-full">
+        <div className="flex flex-row w-full h-screen">
             <div className="w-2/3 mx-auto">
                 <div className="my-24">
-                    <h1 className="text-5xl bold font-extrabold bg-gradient-to-r from-green-400 via-blue-400 to-blue-600 bg-clip-text text-transparent ">All blog posts </h1>
+                    <h1 className="text-5xl bold font-extrabold bg-gradient-to-r from-green-400 via-blue-400 to-blue-600 bg-clip-text text-transparent">All blog posts </h1>
                 </div>
-                <div className="flex flex-col md:flex-row md:justify-between flex-wrap mb-24">
+                <div className="flex flex-col md:flex-row md:justify-around flex-wrap mb-24">
                 {blogs.map((blog) => (
-                    <div key={blog._id} className="w-full md:w-96 bg-gradient-to-r g-gradient-to-r from-green-400 via-blue-400 to-blue-600 rounded-xl p-0.5 mb-6 hover:scale-105">
+                    <div key={blog._id} className="w-full md:w-fit bg-gradient-to-r g-gradient-to-r from-green-400 via-blue-400 to-blue-600 rounded-xl p-0.5 m-3 mb-6 hover:scale-105">
                         <div className="h-full bg-white rounded-xl p-3">
-                            <div className="flex flex-row flex-wrap">
-                                <Link href={`/blog/${blog.slug}`} className="mr-1 bold text-black">
+                            <div className="flex flex-row flex-wrap my-auto">
+                                <Link href={`/blog/${blog.slug}`} className="mr-1 bold text-black my-auto">
                                 {blog.name}
                                 </Link>
-                                <div className="border p-1 text-sm border-blue-200 rounded-lg">{blog.category}</div>
+                                <div className={blog.category=="Book Review"? "border p-1 text-sm border-blue-200 rounded-lg": "border p-1 text-sm border-green-200 rounded-lg" }>{blog.category}</div>
                             </div>
                             <div className="my-2 text-sm">{blog.subtitle}</div>
                         </div>

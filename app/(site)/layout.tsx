@@ -14,7 +14,7 @@ export default async function RootLayout({
   return (
     <html lang="en" className="bg-white">
       <Head>
-        <link rel='shortcut icon' href='../favicon.png'/>
+        <link rel="icon" type="image/x-icon" href='app\favicon.ico'/>
       </Head>
       <main className="h-min-screen">{children}</main>
     </html>
