@@ -7,6 +7,7 @@ export type Blog = {
   slug: string;
   date: string;
   category: string;
-  subtitle: string
+  subtitle: string;
+  image?: string;
   content: PortableTextBlock[];
 }
