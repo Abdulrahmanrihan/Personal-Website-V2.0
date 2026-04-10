@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls \"C:\\\\Users\\\\COMPUMARTS\\\\.claude\\\\projects\\\\F--Coding-Personal-Website-V2-0\\\\memory\"\" 2>/dev/null && echo \"EXISTS\" || echo \"NOT_EXISTS \")"
+    ]
+  }
+}

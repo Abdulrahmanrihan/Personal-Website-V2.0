@@ -25,6 +25,7 @@ export async function getBlogPosts(): Promise<Blog[]> {
       _createdAt,
       name,
       "slug": slug.current,
+      "image": image.asset->url,
       category,
       subtitle,
       content
@@ -39,6 +40,7 @@ export async function getBlogPost(slug: string): Promise<Blog> {
       _createdAt,
       name,
       "slug": slug.current,
+      "image": image.asset->url,
       date,
       category,
       subtitle,
