@@ -6,9 +6,9 @@ import Link from "next/link";
 export default async function Blogs() {
   const blogs = await getBlogPosts();
   return (
-    <div className="bg-white dark:bg-gray-900 text-black dark:text-white min-h-screen transition-colors duration-300">
+    <div className="bg-white dark:bg-gray-900 text-black dark:text-white min-h-screen flex flex-col transition-colors duration-300">
       <Header />
-      <div className="flex flex-row w-full">
+      <div className="flex flex-row w-full flex-1">
         <div className="w-full md:w-2/3 mx-auto px-6 md:px-0">
           <div className="my-24">
             <p className="text-xs font-mono font-bold tracking-widest text-green-500 dark:text-green-400 mb-3 uppercase">{"< WRITING />"}</p>

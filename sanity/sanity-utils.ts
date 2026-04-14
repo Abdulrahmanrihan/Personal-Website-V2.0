@@ -5,14 +5,19 @@ import clientConfig from './config/client-config'
 
 export async function getProjects(): Promise<Project[]> {
   return createClient(clientConfig).fetch(
-    groq`*[_type == "project"]{
+    groq`*[_type == "project"] | order(year desc) {
       _id,
       _createdAt,
       name,
       "slug": slug.current,
-      "image": image.asset->url,
+      "images": images[]{
+        "url": asset->url,
+        alt
+      },
+      "legacyImage": image.asset->url,
       url,
       category,
+      year,
       content
     }`
   )
