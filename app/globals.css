@@ -56,98 +56,39 @@ html {
 .animate-fade-up-5 { animation: fadeUp 0.6s ease-out 0.45s both; }
 .animate-fade-up-6 { animation: fadeUp 0.6s ease-out 0.55s both; }
 
-/* ── Project card image hover overlay ───────────────────────── */
+/* ── Project card image overlay (React state-driven) ─────────────────── */
 
-/* Small stacked thumbnails shown at rest in card footer */
-.card-fan-rest {
+/* Playing-card hand container */
+.card-fan-hand {
   position: relative;
-  width: 64px;
-  height: 48px;
   flex-shrink: 0;
-  transition: opacity 0.25s ease;
-}
-.card-fan-rest img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 6px;
-  border: 2px solid rgba(255, 255, 255, 0.35);
-}
-.card-fan-rest img:nth-child(1) { transform: translate(-7px, 3px) rotate(-6deg); z-index: 1; }
-.card-fan-rest img:nth-child(2) { transform: translate(-3px, 1px) rotate(-2deg); z-index: 2; }
-.card-fan-rest img:nth-child(3) { transform: translate( 1px,-1px) rotate( 2deg); z-index: 3; }
-.card-fan-rest img:nth-child(4) { transform: translate( 5px,-3px) rotate( 6deg); z-index: 4; }
-
-/* Card content blurs when overlay is active */
-.card-blurable {
-  transition: filter 0.3s ease, opacity 0.3s ease;
-}
-.project-card.has-images:hover .card-blurable {
-  filter: blur(4px);
-  opacity: 0.2;
-}
-.project-card.has-images:hover .card-fan-rest {
-  opacity: 0;
 }
 
-/* Full-screen backdrop — appears behind the image panel */
-.project-card.has-images:hover::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  z-index: 9998;
-  background: rgba(0, 0, 0, 0.72);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  animation: backdropIn 0.25s ease forwards;
+/* Backdrop fade-in */
+.fan-backdrop {
+  animation: fanBackdropIn 0.22s ease forwards;
 }
-@keyframes backdropIn {
+@keyframes fanBackdropIn {
   from { opacity: 0; }
   to   { opacity: 1; }
 }
 
-/* Image panel — fixed, centred, ~50vw wide */
-.fan-overlay {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -46%) scale(0.92);
-  width: min(52vw, 820px);
-  z-index: 9999;
-  display: flex;
-  align-items: stretch;
-  justify-content: center;
-  gap: 12px;
-  padding: 0;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease, transform 0.38s cubic-bezier(0.34, 1.56, 0.64, 1);
+/* Image panel spring entrance */
+.fan-panel {
+  animation: fanPanelIn 0.38s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
-.fan-overlay img {
-  flex: 1;
-  min-width: 0;
-  height: 340px;
-  object-fit: cover;
-  border-radius: 14px;
-  border: 2px solid rgba(255, 255, 255, 0.18);
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.7);
-  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
-  transform: translateY(18px) scale(0.94);
+@keyframes fanPanelIn {
+  from { opacity: 0; transform: translate(-50%, -46%) scale(0.88); }
+  to   { opacity: 1; transform: translate(-50%, -50%) scale(1); }
 }
-.fan-overlay img:nth-child(1) { transition-delay: 0.00s; }
-.fan-overlay img:nth-child(2) { transition-delay: 0.06s; }
-.fan-overlay img:nth-child(3) { transition-delay: 0.12s; }
-.fan-overlay img:nth-child(4) { transition-delay: 0.18s; }
 
-.project-card.has-images:hover .fan-overlay {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translate(-50%, -50%) scale(1);
+/* Per-image staggered entrance */
+.fan-img-enter {
+  animation: fanImgIn 0.36s cubic-bezier(0.34, 1.56, 0.64, 1) both;
 }
-.project-card.has-images:hover .fan-overlay img {
-  transform: translateY(0) scale(1);
+@keyframes fanImgIn {
+  from { opacity: 0; transform: translateY(18px) scale(0.9); }
+  to   { opacity: 1; transform: translateY(0)    scale(1); }
 }
 
 /* ── Glitch effect on hero name ──────────────────────────── */
