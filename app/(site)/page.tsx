@@ -115,9 +115,9 @@ function TerminalProjectCard({ project }: { project: Project }) {
       <div className="flex flex-col flex-1 p-6 bg-white dark:bg-gray-900">
         <div className="flex items-start justify-between mb-3 gap-2">
           <h3 className="font-bold text-lg text-gray-900 dark:text-white">{project.name}</h3>
-          {project.category && (
+          {(project.categories?.[0] || project.legacyCategory) && (
             <span className="flex-shrink-0 text-xs border border-blue-400 dark:border-blue-500 text-blue-500 dark:text-blue-400 px-2 py-0.5 rounded-lg">
-              {project.category}
+              {project.categories?.[0] ?? project.legacyCategory}
             </span>
           )}
         </div>
