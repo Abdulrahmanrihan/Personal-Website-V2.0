@@ -12,7 +12,7 @@ export default function Footer() {
             href="mailto:abdelrahman.rihan@ejust.edu.eg"
             className="underline hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
           >
-            abdelrahman.rihan@ejust.edu.eg
+            abdulrahmanrihan26@gmail.com
           </a>
         </p>
       </div>
