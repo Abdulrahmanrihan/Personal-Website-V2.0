@@ -121,7 +121,7 @@ function ProjectCard({ project }: { project: Project }) {
                     bg-white dark:bg-gray-900
                     hover:border-green-400/60 dark:hover:border-green-500/40
                     hover:shadow-[0_0_0_1px_rgba(74,222,128,0.25),0_12px_40px_rgba(59,130,246,0.1)]
-                    transition-all duration-300 overflow-hidden hover:z-20 relative`}>
+                    transition-all duration-300 overflow-visible hover:z-20 relative`}>
 
       {/* ── All blurable card content ─── */}
       <div className="card-blurable h-full flex flex-col">
