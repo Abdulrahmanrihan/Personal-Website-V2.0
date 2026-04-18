@@ -16,7 +16,8 @@ export async function getProjects(): Promise<Project[]> {
       },
       "legacyImage": image.asset->url,
       url,
-      category,
+      categories,
+      "legacyCategory": category,
       year,
       content
     }`

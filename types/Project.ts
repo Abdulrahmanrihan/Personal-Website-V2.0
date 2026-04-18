@@ -11,7 +11,8 @@ export type Project = {
   name: string;
   slug: string;
   url: string;
-  category: string;
+  categories?: string[];
+  legacyCategory?: string;
   year?: number;
   images?: ProjectImage[];
   legacyImage?: string;

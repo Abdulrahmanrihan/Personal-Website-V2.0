@@ -82,6 +82,13 @@ function getIcon(category: string): JSX.Element {
   return ICONS[category?.toLowerCase().trim()] ?? FALLBACK_ICON
 }
 
+/** Merge new categories[] with legacy single category string */
+function getCategories(project: Project): string[] {
+  if (project.categories?.length) return project.categories
+  if (project.legacyCategory) return [project.legacyCategory]
+  return []
+}
+
 // ── Sub-components ─────────────────────────────────────────────────────
 
 function getImages(project: Project): ProjectImage[] {
@@ -106,6 +113,7 @@ function CardFanRest({ imgs, name }: { imgs: ProjectImage[]; name: string }) {
 function ProjectCard({ project }: { project: Project }) {
   const imgs = getImages(project)
   const hasImages = imgs.length > 0
+  const cats = getCategories(project)
 
   return (
     <div className={`project-card${hasImages ? " has-images" : ""} h-full flex flex-col rounded-2xl
@@ -120,14 +128,21 @@ function ProjectCard({ project }: { project: Project }) {
 
         {/* Card header */}
         <div className="px-5 pt-5 pb-4 flex items-start justify-between gap-3">
-          <div className="flex items-center gap-2.5 min-w-0">
-            <div className="w-8 h-8 rounded-lg bg-gray-900 dark:bg-black flex items-center justify-center text-white flex-shrink-0">
-              {getIcon(project.category)}
-            </div>
-            {project.category && (
-              <span className="text-xs font-semibold text-gray-500 dark:text-gray-400 truncate tracking-wide uppercase">
-                {project.category}
-              </span>
+          {/* Category icon badges */}
+          <div className="flex flex-wrap items-center gap-2 min-w-0">
+            {cats.length > 0 ? cats.map((cat) => (
+              <div key={cat} className="flex items-center gap-1.5 flex-shrink-0">
+                <div className="w-7 h-7 rounded-md bg-gray-900 dark:bg-black flex items-center justify-center text-white">
+                  {getIcon(cat)}
+                </div>
+                <span className="text-xs font-semibold text-gray-500 dark:text-gray-400 tracking-wide uppercase">
+                  {cat}
+                </span>
+              </div>
+            )) : (
+              <div className="w-7 h-7 rounded-md bg-gray-900 dark:bg-black flex items-center justify-center text-white">
+                {FALLBACK_ICON}
+              </div>
             )}
           </div>
           {project.year && (
